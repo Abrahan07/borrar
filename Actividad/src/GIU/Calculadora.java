@@ -461,12 +461,14 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSumActionPerformed
 
     private void btnIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIgualActionPerformed
-        String resultado;
-        num2=txtResultado.getText();
-        resultado = Operaciones.calcular(num1, num2, operador);
-        txtResultado.setText(resultado);
-        
-    }//GEN-LAST:event_btnIgualActionPerformed
+            String resultado;
+            num2=txtResultado.getText();
+            if (num2.equals("0")){
+                txtResultado.setText("Error");
+            }else{
+                resultado = Operaciones.calcular(num1, num2, operador);
+                txtResultado.setText(resultado);
+        }//GEN-LAST:event_btnIgualActionPerformed
 
     /**
      * @param args the command line arguments
